@@ -101,7 +101,11 @@ def testLipsticks():
 
 def getLastStudent(numberOfStudents, treats, startingChair):
     # TODO: Solve problem 3 here
-    return None
+    non_cyclic_treats = (treats-1) % numberOfStudents
+    #
+    result = (startingChair-1 + non_cyclic_treats) % numberOfStudents + 1
+    #print(result)
+    return result
 
 def testLastStudent():
         print('\n'+ '-' * 20)
@@ -110,7 +114,24 @@ def testLastStudent():
         assert getLastStudent(5,2,2) == 3
         assert getLastStudent(7,19,2) == 6
         assert getLastStudent(3,7,3) == 3
+
         # TODO add your own test cases here
+        # boundary cases
+        assert getLastStudent(10**9, 10**9, 10**9 // 2) == 10**9//2 - 1
+        assert getLastStudent(10**9, 10**9, 1) == 10**9
+        assert getLastStudent(10**9, 10**9, 10**9) == 10**9-1
+        #
+        assert getLastStudent(1, 10**9, 1) == 1
+        #
+        assert getLastStudent(10**9, 1, 2) == 2
+        assert getLastStudent(10**9, 1, 1) == 1
+        assert getLastStudent(10**9, 1, 10**9) == 10**9
+        #
+        assert getLastStudent(1, 1, 1) == 1
+
+        # normal case
+        assert getLastStudent(11, 31, 6) == 3
+
 
         print('PASSED PROBLEM 3!')
 
@@ -135,5 +156,5 @@ def testPairsOfShoes():
 # Call test functions
 testLeastFactorial()
 testLipsticks()
-#testLastStudent()
+testLastStudent()
 #testPairsOfShoes()
