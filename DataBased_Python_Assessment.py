@@ -53,6 +53,8 @@ def testLeastFactorial():
 # assuming that each of your customers return their leftovers
 
 def getTotalNumberOfLipsticks(numberOfLipsticks, numberOfLeftoversNeeded):
+    if numberOfLeftoversNeeded < 0:
+        return None
     # there would be infinite number of lip sticks in this case. However, this is not realistic. 
     # Thus, the precondition should be that numberOfLeftoverNeeded must be greater than 0. 
     # We should raise an error here. 
@@ -68,7 +70,7 @@ def getTotalNumberOfLipsticks(numberOfLipsticks, numberOfLeftoversNeeded):
 
         sticks_sold = sticks_sold + new_sticks
         leftover = new_sticks + unused_leftover
-    print(sticks_sold)
+    #print(sticks_sold)
     return sticks_sold
 
 def testLipsticks():
@@ -80,6 +82,7 @@ def testLipsticks():
     # TODO: add your own test cases here
     assert getTotalNumberOfLipsticks(0, 2) == 0
     assert getTotalNumberOfLipsticks(10, 0) == "inf"
+    assert getTotalNumberOfLipsticks(10, -1) == None
 
     print('PASSED PROBLEM 2!')
 
