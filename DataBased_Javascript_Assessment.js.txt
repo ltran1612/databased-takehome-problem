@@ -1,0 +1,167 @@
+/// Hello World! Thanks for exploring the opportunity to join us at DataBased. We wish you the best with the assessment.
+/// Please complete and come prepared to present your solutions to the team.
+
+/// Instructions: Solve the problems listed below.
+/// In order to run the program please install a recent version of node
+/// Then change your current directory to the same as the file
+/// Run the command `node DataBased_Javascript_Assessment.js`
+
+/**
+ * Given an integer n, find the minimal k such that
+ * k = m! (where m! = 1 * 2 * ... * m) for some integer m; k ≥n. In other
+ * words, find the smallest factorial which is not less than n.
+ */
+function leastFactorial(n) {
+  /* todo: Solve Problem 1 here */
+  return 0;
+}
+
+function testLestFactorial() {
+  console.log("\n" + "-".repeat(20));
+  console.log("Part 1: Least Factorial");
+  console.log(`Input 17, should be 24, output: ${leastFactorial(17)}`); //1*2*3*4
+  console.log(`Input 5, should be 6, output: ${leastFactorial(5)}`); //1*2*3
+
+  //todo: Add Test for 106 //1*2*3*4*5
+}
+
+/**
+ * When a lipstick container is empty, there is actually
+ * some leftover lipstick at the bottom that cannot be used because it is not
+ * accessible. Being an environmentally friendly business owner, you would like to
+ * recycle the leftover lipstick to make more. As a business, you know you need
+ * ‘numberOfLeftoversNeeded‘ to make a new lipstick. You have ‘numberOfLipsticks‘
+ * in your possession. What’s the total number of lipsticks you can sell
+ * assuming that each of your customers return their leftovers?
+ */
+function getTotalNumberOfLipsticks(numberOfLipsticks, numberOfLeftoversNeeded) {
+  return 0;
+}
+
+function testLipstick() {
+  console.log("\n" + "-".repeat(20));
+  console.log("Part 2: Lipstick");
+  console.log(
+    "Input 5 lipsticks and 2 left overs needed, should be: 9, output: " +
+      getTotalNumberOfLipsticks(10, 3)
+  );
+  console.log(
+    "Input 15 lipsticks and 5 left overs needed, should be: 18, output: " +
+      getTotalNumberOfLipsticks(10, 3)
+  );
+
+  //todo: Add Test for 2 lipsticks and 3 leftovers
+}
+
+/**
+ * A school teacher wants to hand out treats to his students. The teacher decides
+ * the best way to divide the treats is to have the students sit in a circle of
+ * sequentially numbered chairs. A chair number will be drawn from a hat. Beginning
+ * with the student in drawn chair, one treat will be handed to each student
+ * sequentially going around the circle until all treats have been distributed.
+ * The teacher wants to have the students involved in sharing treats. He decides
+ * that whoever gets the very last treat, will be the student who makes the treats
+ * for the next game. Determine the chair number occupied by the student who
+ * will receive the last treat.
+ * For example, there are 4 students and 6 treats. The students arrange them-
+ * selves in seats numbered 1 to 4. Let’s suppose 2 is drawn from the hat. Students
+ * receive treats at positions 2,3,4,1,2,3. The student who gets the last treat is in
+ * chair number 3.
+ */
+function getLastStudent(numberOfLipsticks, numberOfLeftoversNeeded) {
+  /*Solve Problem 3 here */
+  return 0;
+}
+
+function testLastStudent(numberOfStudents, treats, startingChair) {
+  console.log("\n" + "-".repeat(20));
+  console.log("Part 3: Last Student");
+  console.log(
+    "Input 5 student, 2 treats, and 1 as starting chair, should be 2, , output: " +
+      getLastStudent(5, 2, 1)
+  );
+  console.log(
+    "Input 5 student, 2 treats, and 2 as starting chair, should be 3, , output: " +
+      getLastStudent(5, 2, 2)
+  );
+  console.log(
+    "Input 7 student, 19 treats, and 2 as starting chair, should be 6, , output: " +
+      getLastStudent(7, 19, 2)
+  );
+
+  //todo: Add Test for 3 students, 7 treats, and 3 as starting chair lipsticks and 3 leftovers needed
+}
+
+/**
+ * A school teacher wants to hand out treats to his students. The teacher decides
+ * the best way to divide the treats is to have the students sit in a circle of
+ * sequentially numbered chairs. A chair number will be drawn from a hat. Beginning
+ * with the student in drawn chair, one treat will be handed to each student
+ * sequentially going around the circle until all treats have been distributed.
+ * The teacher wants to have the students involved in sharing treats. He decides
+ * that whoever gets the very last treat, will be the student who makes the treats
+ * for the next game. Determine the chair number occupied by the student who
+ * will receive the last treat.
+ * For example, there are 4 students and 6 treats. The students arrange them-
+ * selves in seats numbered 1 to 4. Let’s suppose 2 is drawn from the hat. Students
+ * receive treats at positions 2,3,4,1,2,3. The student who gets the last treat is in
+ * chair number 3.
+ */
+function getLastStudent(numberOfLipsticks, numberOfLeftoversNeeded) {
+  /*Solve Problem 3 here */
+  return 0;
+}
+
+function testLastStudent() {
+  console.log("\n" + "-".repeat(20));
+  console.log("Part 3: Last Student");
+  console.log(
+    "Input 5 student, 2 treats, and 1 as starting chair, should be 2, output: " +
+      getLastStudent(5, 2, 1)
+  );
+  console.log(
+    "Input 5 student, 2 treats, and 2 as starting chair, should be 3, output: " +
+      getLastStudent(5, 2, 2)
+  );
+  console.log(
+    "Input 7 student, 19 treats, and 2 as starting chair, should be 6, output: " +
+      getLastStudent(7, 19, 2)
+  );
+
+  //todo: Add Test for 3 students, 7 treats, and 3 as starting chair lipsticks and 3 leftovers needed
+}
+
+/*
+ * Given an array of strings that represent a type of shoe, return how many matching
+ * pairs of shoes can be made?
+ */
+function getPairsOfShoes(shoes) {
+  /*Solve Problem 4 here */
+  return 0;
+}
+
+function testPairsOfShoes() {
+  console.log("\n" + "-".repeat(20));
+  console.log("Part 4: Pairs of Shoes");
+  let shoes = ["red", "blue", "red", "green", "green", "red"];
+  console.log(
+    "Input [",
+    shoes.join(","),
+    "], should be 2, output: " + getPairsOfShoes(shoes)
+  );
+  shoes = ["green", "blue", "blue", "blue", "blue", "blue", "green"];
+  console.log(
+    "Input [",
+    shoes.join(","),
+    "], should be 3, output: " + getPairsOfShoes(shoes)
+  );
+
+  //todo: Add Test for 0 pair of shoes
+  //todo: Add Test for 1 pair of shoes
+  console.log("\n");
+}
+
+testLestFactorial();
+testLipstick();
+testLastStudent();
+testPairsOfShoes();
