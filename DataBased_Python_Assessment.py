@@ -137,7 +137,18 @@ def testLastStudent():
 
 def getPairsOfShoes(listOfShoes):
     # TODO: Solve problem 4 here
-    return None
+    unique_shoes_count = {}
+    for shoes in listOfShoes:
+        if shoes not in unique_shoes_count:
+            unique_shoes_count[shoes] = 1
+        else:
+            unique_shoes_count[shoes] = unique_shoes_count[shoes] + 1
+    
+    result = 0
+    for shoes in unique_shoes_count.keys():
+        result = result + unique_shoes_count[shoes] // 2
+
+    return result
 
 # PROBLEM 4 - Pairs of Shoes
 # Given an array of strings that represent a type of shoe, return how many matching
@@ -149,6 +160,11 @@ def testPairsOfShoes():
     assert getPairsOfShoes(["red", "blue", "red", "green", "green", "red"]) == 2
     assert getPairsOfShoes(["green", "blue", "blue", "blue", "blue", "blue", "green"]) == 3
     # TODO: Add your own test cases here
+    assert getPairsOfShoes([]) == 0
+    assert getPairsOfShoes(["blue", "green", "black"]) == 0
+    assert getPairsOfShoes(["blue", "green", "green"]) == 1
+    assert getPairsOfShoes(["blue", "green", "black", "blue", "blue", "green"]) == 2
+    assert getPairsOfShoes(["green", "green", "green", "green", "green", "green"]) == 3
 
     print('PASSED PROBLEM 4!')
     print('\n\nCongratulations!!')
@@ -157,4 +173,4 @@ def testPairsOfShoes():
 testLeastFactorial()
 testLipsticks()
 testLastStudent()
-#testPairsOfShoes()
+testPairsOfShoes()
